@@ -22,12 +22,17 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        
+        Json.instance.Load();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnApplicationQuit()
+    {
+        Json.instance.Save();
     }
 }

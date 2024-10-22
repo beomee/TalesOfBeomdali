@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class DogEnemy : Enemy
+public class Player : MonoBehaviour
 {
-    float A = 0.1f;
-    float b = 0.1f;
-    float c = 0.01f;
+    public Slider playerHp;
+    public Slider playerMp;
 
     // Start is called before the first frame update
-    protected override void Start()
+    void Start()
     {
-        base.Start();
-        enemyHp = 10;
-        print(enemyHp);
+        playerHp.value = Json.instance.data.hp;
+        playerMp.value = Json.instance.data.mp;
     }
 
     // Update is called once per frame

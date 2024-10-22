@@ -6,6 +6,7 @@ public class DogEnemy : Enemy
 {
     float A = 0.1f;
     float b = 0.1f;
+    float c = 0.01f;
     // Start is called before the first frame update
     protected override void Start()
     {
